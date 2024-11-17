@@ -181,3 +181,22 @@ footer p span {
     color: #007BFF;
 }
 
+/* Image Section */
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(45deg, #007BFF, #000); /* Blue and black gradient */
+}
+
+.circle-image {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Make it a perfect square */
+    border-radius: 50%; /* Turns the square into a circle */
+    border: 5px solid #fff; /* Optional: white border around the image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Optional: adds a shadow for depth */
+    object-fit: cover; /* Ensures the image fits within the circle without distortion */
+}
+
+
