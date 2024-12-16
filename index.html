@@ -1,51 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatBot Dev Services</title>
-    <link rel="stylesheet" href="new5.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChatBot Dev Services</title>
+        <link rel="stylesheet" href="new5.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+        <!-- Adding Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    
+        <style>
+            footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                color: white;
+                padding: 10px;
+                text-align: center;
+                z-index: 1000;
+            }
+    
+            body {
+                padding-bottom: 50px; /* Adjust to fit footer height */
+            }
+        </style>
+    </head>
+    
 <body>
     <header class="navbar">
-        <div class="logo"> Vixel</div>
+        <div class="logo">
+            <img src="HuxoAR.jpg" alt="Logo">
+        </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section id="image-section" class="image-section">
-        <img src="Pic 11.JPG" alt="Centered Circular Image" class="circle-image">
+
+    <section id="slogan" class="slogan">
+        <h1>Your Time, Your Power</h1>
+        <p>Save It, Boost Productivity, Achieve More.</p>
     </section>
-    
 
     <section id="home" class="home">
         <div class="hero-content">
-            <h1>Revolutionize Customer Interaction with Vixel</h1>
+            <h1>Revolutionize Customer Interaction with HuxoAR</h1>
             <p>We build AI-driven chatbots tailored to your business needs.</p>
             <a href="#contact" class="cta-button">Get Started</a>
         </div>
     </section>
-    <script type="text/javascript">
-        (function(d, t) {
-            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            v.onload = function() {
-              window.voiceflow.chat.load({
-                verify: { projectID: '673849bc0038a670b484f636' },
-                url: 'https://general-runtime.voiceflow.com',
-                versionID: 'production'
-              });
-            }
-            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-        })(document, 'script');
-      </script>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Chatbot Integration</h3>
+                <p>Seamlessly integrate intelligent chatbots to handle customer queries 24/7.</p>
+            </div>
+            <div class="service-item">
+                <h3>AI Voice Agents</h3>
+                <p>Empower your business with AI voice solutions to enhance customer interactions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Centered Circular Image Section -->
+    <!-- Centered Framed Image Section -->
+    <section id="image-section" class="image-section">
+        <div class="image-container">
+            <img src="Pic 11.jpg" alt="Framed Image">
+        </div>
+    </section>
+
+
 
     <section id="about" class="about">
         <h2>About Us</h2>
-        <p>At <b>Vixel</b>, I am Abdul Rafay Ikram, responsible here at Vixel, I have always wanted to build things that become useful to people, that people use in their daily life to improve their life, we specialize in creating intelligent, user-friendly chatbot solutions to improve your customer engagement. I leverage cutting-edge AI technologies to develop chatbots for businesses of all sizes.</p>
+        <p>At <b>HuxoAR</b>, I am Abdul Rafay Ikram. I have always wanted to build things that improve people's lives. We specialize in creating intelligent, user-friendly chatbot solutions to enhance customer engagement. Using cutting-edge AI technologies, we develop chatbots for businesses of all sizes.</p>
         <p>Why Choose Us?</p>
         <ul>
             <li>Customizable AI solutions</li>
@@ -56,23 +94,50 @@
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <form action="#" class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Send Message</button>
+        <form action="https://hooks.airtable.com/workflows/v1/genericWebhook/appM80ZV3e4IWH2tB/wflNvrsalclD0UtyF/wtr3AewX7aalZU17i" method="POST" class="contact-form">
+            <div>
+                <label for='name'>Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+        
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+        
+            <button type="submit" id="submitButton">Send Message</button>
         </form>
-    </section>
+        
+        <p><b>Phone:</b> +971 56 845 9738</p>
+        <p><b>Email:</b> <a href ="mailto:abdulrafayikram988@gmail.com">abdulrafayikram988@gmail.com</a></p>
+    </section> 
 
     <footer>
-        <p>© 2024 ChatBotPro. All Rights Reserved.</p>
+        <p>© 2024 HuxoAR. All Rights Reserved.</p>
+        
+
+        
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/abdul-rafay-ikram-3672aa25a/" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/@Abdul988-u8r" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="mailto:abdulrafayikram988@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
     </footer>
+    
+    
+    
     <script src="new5.js"></script>
 </body>
 </html>

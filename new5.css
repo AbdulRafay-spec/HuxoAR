@@ -1,11 +1,10 @@
-/* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
-
 /* General Reset */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    background-color: #000; /* Main background theme */
+    color: #fff;
 }
 
 /* Navbar */
@@ -19,19 +18,18 @@ body, html {
     top: 0;
     z-index: 1000;
 }
-.navbar .logo {
-    font-size: 1.8rem;
-    color: #007BFF;
-    font-weight: 700;
+
+.logo img {
+    width: 120px; /* Resized the logo */
+    height: auto;
 }
-.navbar .logo span {
-    color: #fff;
-}
+
 .navbar .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
+
 .navbar .nav-links li a {
     text-decoration: none;
     color: #fff;
@@ -39,8 +37,28 @@ body, html {
     transition: color 0.3s ease;
     font-weight: 500;
 }
+
 .navbar .nav-links li a:hover {
     color: #007BFF;
+}
+
+/* Slogan Section */
+.slogan {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(90deg, #007BFF, #000); /* Blue and black gradient */
+    color: #fff;
+}
+
+.slogan h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.slogan p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ddd;
 }
 
 /* Hero Section */
@@ -53,36 +71,97 @@ body, html {
     height: 100vh;
     color: #fff;
 }
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    font-weight: bold; /* Added this to make the text bold */
+}
+
+
 .hero-content h1 {
     font-size: 2.8rem;
     margin-bottom: 20px;
     font-weight: 700;
+    line-height: 1.2;
 }
-.hero-content span {
-    color: #000;
-    background-color: #007BFF;
-    padding: 0 5px;
-    border-radius: 3px;
-    font-weight: 600;
-}
+
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 20px;
-    font-family: 'Roboto', sans-serif;
+    color: #ccc;
 }
-.hero-content .cta-button {
+
+.cta-button {
     padding: 12px 25px;
-    background-color: #000;
-    color: #007BFF;
+    background-color: #007BFF;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.1rem;
     font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glowing effect */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-.hero-content .cta-button:hover {
-    background-color: #007BFF;
-    color: #000;
+
+.cta-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 1); /* Enhanced glow effect */
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+    font-weight: 700;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    max-width: 300px;
+    background-color: #000;
+    border: 1px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #ccc;
 }
 
 /* About Section */
@@ -90,28 +169,37 @@ body, html {
     padding: 50px 20px;
     background-color: #111;
     text-align: center;
-    color: #fff;
+    max-width: 900px;
+    margin: 0 auto; /* Centers the About section */
 }
+
 .about h2 {
     font-size: 2.4rem;
-    color: #007BFF;
     margin-bottom: 20px;
+    color: #007BFF;
     font-weight: 700;
 }
+
 .about p {
     font-size: 1.2rem;
     color: #ccc;
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
 }
+
 .about ul {
     list-style: none;
     padding: 0;
+    text-align: left;
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
+
 .about ul li {
     font-size: 1.1rem;
-    margin: 5px 0;
-    color: #fff;
+    color: #ccc;
+    margin-bottom: 10px;
 }
 
 /* Contact Section */
@@ -119,84 +207,190 @@ body, html {
     padding: 50px 20px;
     background-color: #000;
     text-align: center;
-    color: #fff;
 }
+
 .contact h2 {
     font-size: 2.4rem;
     margin-bottom: 20px;
-    color: #007BFF;
+    color: #00ffd5;
     font-weight: 700;
 }
+
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px; /* Increase this value for more space between elements */
     max-width: 500px;
     margin: 0 auto;
 }
-.contact-form input, .contact-form textarea, .contact-form button {
-    padding: 12px;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    border: none;
-    border-radius: 5px;
+
+.contact-form label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
-.contact-form input, .contact-form textarea {
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
     background-color: #111;
     color: #fff;
-    border: 1px solid #007BFF;
 }
-.contact-form input:focus, .contact-form textarea:focus {
-    outline: none;
-    border-color: #007BFF;
+
+.contact-form textarea {
+    height: 100px; /* Adjust this value as needed */
+    resize: vertical;
 }
+
+/*.contact-form button {
+ /*   width: 100%;
+  /*  padding: 10px 20px;
+  /*  margin-top: 10px;
+  /*  background-color: #0056b3;
+   /* font-weight: bold;
+    /*: white;
+    /*font-size: 1rem; 
+
+/*}*/ 
+
 .contact-form button {
-    background-color: #007BFF;
-    color: #000;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border: 1px solid #007BFF;
-    align-self: center; /* Centers the button horizontally */
+    width: 150 px; /* Make the button full width like the text box */
+    padding: 12px; /* Match padding with input fields */
+    margin-top: 10px;
+    background-color: #007BFF; /* Use a consistent color */
+    color: white; /* Make the text white */
+    font-weight: bold; /* Make the text bold */
+    font-size: 1rem; /* Match font size with input fields */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Match border radius with input fields */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
+
 .contact-form button:hover {
-    background-color: #000;
-    color: #007BFF;
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #111;
-    color: #fff;
-}
-footer p {
-    font-size: 0.9rem;
-    color: #ccc;
-    font-family: 'Roboto', sans-serif;
-}
-footer p span {
-    color: #007BFF;
-}
 
-/* Image Section */
+
+/* Centered Framed Image */
 .image-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    background: linear-gradient(45deg, #007BFF, #000); /* Blue and black gradient */
+    padding: 50px 0;
+    background-color: #111; /* Background for contrast */
 }
 
-.circle-image {
-    width: 200px; /* Adjust size as needed */
-    height: 200px; /* Make it a perfect square */
-    border-radius: 50%; /* Turns the square into a circle */
-    border: 5px solid #fff; /* Optional: white border around the image */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Optional: adds a shadow for depth */
-    object-fit: cover; /* Ensures the image fits within the circle without distortion */
+.image-container {
+    border: 5px solid #007BFF; /* Blue border frame */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px; /* Inner spacing for frame effect */
+    background-color: #000; /* Frame background color */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    display: inline-block; /* To keep it compact */
 }
 
+.image-container img {
+    max-width: 100%; /* Make it responsive */
+    height: auto;
+    border-radius: 10px; /* Slight rounding of the image itself */
+    display: block; /* Remove inline spacing issues */
+}
 
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #000; /* Main background theme */
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    position: fixed; /* Keep it at the bottom of the screen */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #111; /* Footer background */
+    color: white; /* Footer text color */
+    padding: 10px 0; /* Make the footer thinner */
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    z-index: 1000; /* Keep it above other content */
+}
+
+/* Footer content */
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional, to prevent it stretching too wide */
+    padding: 0 20px; /* Optional, to add some spacing around content */
+}
+
+/* Align text and icons horizontally */
+footer .footer-content p, footer .social-icons {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Social Icons */
+.social-icons a {
+    text-decoration: none;
+    color: #007BFF; /* Social icons color */
+    margin: 0 10px;
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Copyright and Contact */
+footer .footer-content p {
+    color: #ccc;
+    font-size: 0.9rem; /* Smaller font for contact */
+    margin-right: 20px;
+}
+
+footer .footer-content p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer .footer-content p a:hover {
+    color: #000;
+}
+
+/* Body Adjustment */
+body {
+    padding-bottom: 50px; /* Add enough padding at the bottom so content doesn't get hidden by the fixed footer */
+}
+
+/* Adjustments for smaller screens (optional) */
+@media (max-width: 768px) {
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-content p {
+        margin-bottom: 10px;
+    }
+
+    footer .social-icons {
+        margin-top: 10px;
+    }
+}
