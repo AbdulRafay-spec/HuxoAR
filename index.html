@@ -32,7 +32,7 @@
 <body>
     <header class="navbar">
         <div class="logo">
-            <img src="HuxoAR.jpg" alt="Logo">
+            <img src="public/images/HuxoAR.jpg" alt="Logo">
         </div>
         <nav>
             <ul class="nav-links">
@@ -75,7 +75,7 @@
     <!-- Centered Framed Image Section -->
     <section id="image-section" class="image-section">
         <div class="image-container">
-            <img src="Pic 11.jpg" alt="Framed Image">
+            <img src="public/images/Pic 11.jpg" alt="Framed Image">
         </div>
     </section>
 
@@ -134,10 +134,25 @@
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
+
+
+
+
     </footer>
-    
-    
-    
-    <script src="new5.js"></script>
+    <script src="new5.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '675fcf5a4cd2d816d918f3e9' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production'
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+    </script>
+
 </body>
 </html>
